@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+
+
+    <!-- Compatible con Internet Explorer -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Viewport para que el sitio sea responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Shop CosmoSkin Clinic</title>
+
+    <!-- Iconos de Bootstrap para íconos como carrito -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Librería Toastify notificaciones pequeñas -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <!-- llama estilos.css -->
+    <link rel="stylesheet" href="./main.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+        <!-- Encabezado de la versión móvil -->
+        <header class="header-mobile">
+            <h1 class="logo">Shop CosmoSkin Clinic</h1>
+
+            <!-- Botón para abrir el menú lateral en version movil -->
+            <button class="open-menu" id="open-menu">
+                <i class="bi bi-list"></i>
+            </button>
+        </header>
+
+        <!-- Menú lateral version movil-->
+        <aside>
+
+            <!-- Botón para cerrar el menú en móvil -->
+            <button class="close-menu" id="close-menu">
+                <i class="bi bi-x"></i>
+            </button>
+
+            <header>
+                <h1 class="logo">Shop CosmoSkin Clinic</h1>
+            </header>
+
+            <!-- Navegación del menú lateral en moviles-->
+            <nav>
+                <ul>
+                    <li>
+                        <!-- Botón que regresa al catálogo de compras -->
+                        <a class="boton-menu boton-volver" href="./Index.html">
+                            <i class="bi bi-arrow-return-left"></i> Seguir comprando
+                        </a>
+                    </li>
+                    <li>
+                        <!-- Opción del carrito, llama carrito.html -->
+                        <a class="boton-menu boton-carrito active" href="./Carrito.html">
+                            <i class="bi bi-cart-fill"></i> Carrito
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Footer del menú lateral -->
+            <footer>
+                <p class="texto-footer">© 2025 Shop CosmoSkin Clinic</p>
+            </footer>
+
+        </aside>
+
+        <!-- Contenido principal de la página -->
+        <main>
+
+            <h2 class="titulo-principal">Carrito</h2>
+
+            <div class="contenedor-carrito">
+
+                <!-- Mensaje mostrado cuando el carrito no tiene productos -->
+                <p id="carrito-vacio" class="carrito-vacio">
+                    Tu carrito está vacío. <i class="bi bi-emoji-frown"></i>
+                </p>
+
+                <!-- Contenedor donde se cargan los productos con JS -->
+                <div id="carrito-productos" class="carrito-productos disabled">
+                    <!-- Se llena dinámicamente desde carrito.js -->
+                </div>
+
+                <!-- Acciones del carrito: vaciar, total, comprar -->
+                <div id="carrito-acciones" class="carrito-acciones disabled">
+
+                    <div class="carrito-acciones-izquierda">
+                        <!-- Botón para vaciar el carrito -->
+                        <button id="carrito-acciones-vaciar" class="carrito-acciones-vaciar">
+                            Vaciar carrito
+                        </button>
+                    </div>
+
+                    <div class="carrito-acciones-derecha">
+                        <!-- Total a pagar -->
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$3000</p> <!-- Cambia con JS -->
+                        </div>
+
+                        <!-- Botón para finalizar la compra -->
+                        <button id="carrito-acciones-comprar" class="carrito-acciones-comprar">
+                            Comprar ahora
+                        </button>
+                    </div>
+
+                </div>
+
+                <!-- Mensaje que aparece después de comprar -->
+                <p id="carrito-comprado" class="carrito-comprado disabled">
+                    Muchas gracias por tu compra. <i class="bi bi-emoji-laughing"></i>
+                </p>
+
+            </div>
+
+        </main>
+
+    </div>
+
+    <!-- Librerías JS externas -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Scripts locales -->
+    <script src="./carrito.js"></script>
+    <script src="./menu.js"></script>
+
+</body>
+</html>
